@@ -6,7 +6,11 @@ eureka:
         preferIpAddress: true
 
 server:
+<<<<<<< HEAD
   port: 8002
+=======
+  port: 8001
+>>>>>>> 5965a9248e5bf1f96fcc0196ae71a2f45f0bcce7
 spring:
   application:
     name: eureka-two

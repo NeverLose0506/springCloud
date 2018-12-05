@@ -1,0 +1,24 @@
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://127.0.0.1:8761/eureka/
+    instance:
+        preferIpAddress: true
+
+server:
+  port: 8500
+spring:
+  application:
+    name: eureka-zull
+
+
+zuul:
+  prefix: /api
+  retryable: true
+  routes:
+    client:
+      path: /client/**
+      serviceId: eureka-two
+#    ribbon:
+#       path: /ribbon/**
+#       serviceId: eureka-ribbon-client
